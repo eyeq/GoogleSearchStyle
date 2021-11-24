@@ -1,0 +1,24 @@
+{
+  "name": "GoogleSearchStyle",
+  "description": "Googleの検索メニューの順番を固定にします。検索ツールを常に表示します。検索結果のFaviconを表示します。",
+  "manifest_version": 2,
+  "version": "1.0",
+  "permissions": [
+    "background",
+    "storage",
+    "alarms",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "jquery-3.4.1.min.js",
+        "main.js"
+      ]
+    }
+  ]
+}
